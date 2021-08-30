@@ -15,12 +15,10 @@ class ContactSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        DB::table('contacts')->insert(
-           [
-            ['name' => $faker->name ],
-            ['name' => $faker->name ],
-            ['name' => $faker->name ],
-           ]
-        );
+        for ($i=0; $i < 3; $i++) {
+            DB::table('contacts')->insert(
+                ['name' => $faker->firstName() ]
+            );
+        }
     }
 }
