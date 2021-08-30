@@ -1,3 +1,3 @@
 <div>
-    <input type="text" wire:model="name"> Hello {{ $name }}
+    <input type="text" wire:model.lazy="name"> Hello {{ $name }}
 </div>
