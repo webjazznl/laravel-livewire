@@ -12,6 +12,7 @@
     @if ($loud)
         !!!
     @endif
-
-    <button wire:click="resetName($event.target.innerText)">Reset me</button>
+    <form action='#' wire:submit.preventDefault="$set('name', 'Bingo')">
+    <button >Reset me</button>
+    </form>
 </div>
