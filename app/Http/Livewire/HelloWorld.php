@@ -3,14 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Illuminate\Http\Request;
 
 class HelloWorld extends Component
 {
     public $name = 'Jelly';
 
-    public function mount($name = 'Bar')
+    public function mount(Request $request, $name = 'Bar')
     {
-        $this->name = $name;
+        $this->name = $request->input('name', $name);
     }
 
     public function render()
