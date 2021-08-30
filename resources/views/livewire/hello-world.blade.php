@@ -1,5 +1,5 @@
 <div>
-    <input type="text" name="name" id="name" wire:model="name">
-  Hello {{ $name }} <br>
-  {{ $flower }}
+    @foreach ($names as $name )
+        @livewire('say-hi', ['name' => $name])
+    @endforeach
 </div>
