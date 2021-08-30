@@ -23,8 +23,8 @@ class HelloWorld extends Component
         $this->flower .= '.';
     }
 
-    //runs after update on any field
-    public function updated() {
+    //runs after update on name field
+    public function updatedName() {
         $this->name = strtoupper($this->name);
 
     }
