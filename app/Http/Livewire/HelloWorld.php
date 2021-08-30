@@ -17,12 +17,17 @@ class HelloWorld extends Component
         $this->name = $request->input('name', $name);
     }
 
-    //runs every subsequent ajax request
+    //runs on every subsequent ajax request
     public function hydrate()
     {
         $this->flower .= '.';
     }
 
+    //runs after update on any field
+    public function updated() {
+        $this->name = strtoupper($this->name);
+
+    }
     public function render()
     {
         return view('livewire.hello-world');
